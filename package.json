@@ -1,11 +1,11 @@
 {
-  "name": "anydoor",
+  "name": "anydoor-liusisi",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
   "preferGlobal": "true",
   "bin": {
-    "anydoor": "bin/anydoor"
+    "anydoor-liusisi": "bin/anydoor"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -11,10 +11,12 @@ class Server {
   }
   start() {
     const server = http.createServer((req,res)=>{
-      const filePath = path.join(this.conf.root, req.url);
-      router(req, res, filePath, this.conf);
+      if(req.url!=="/favicon.ico"){
+        const filePath = path.join(this.conf.root, req.url);
+        router(req, res, filePath, this.conf);
+      }
     });
-    
+
     server.listen(this.conf.port, this.conf.hostname, ()=>{
       const addr = `http://${this.conf.hostname}:${this.conf.port}`;
       openUrl(addr);

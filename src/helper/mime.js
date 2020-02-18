@@ -5,13 +5,13 @@ const mimeTypes = {
   'html': 'text/html',
   'ico': 'image/x-icon',
   'jpeg': 'image/jpeg',
-  'js': 'text/javascript',
+  'js': 'text/javascript ; charset=utf-8',
   'json': 'application/json',
   'pdf': 'application/pdf',
   'png': 'image/png',
   'svg': 'image/svg+xml',
   'xml': 'text/xml',
-  'txt': 'text/plain'
+  'txt': 'text/plain ; charset=utf-8'
 }
 
 module.exports = (filePath) => {
@@ -23,6 +23,6 @@ module.exports = (filePath) => {
     ext = filePath;
   }
   return mimeTypes[ext] || mimeTypes['txt'];
-  
+
 }
 
